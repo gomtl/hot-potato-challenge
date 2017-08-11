@@ -60,9 +60,9 @@ type Entry struct {
 Kubernetes configuration
 ------------------------
 
-Download the `kubeconfig` file from the organizer. Place it somewhere safe. Run:
+Download the `kube-potatoe` file from the organizer. Place it somewhere safe. Run:
 
-    export KUBECONFIG=path/to/kubeconfig
+    export KUBECONFIG=path/to/kube-potatoe
 
 You're all set.
 
@@ -75,8 +75,16 @@ Start a GCP Kubernetes clusetr, the size you want.
 Then:
 
     export CLOUDSDK_CONTAINER_USE_CLIENT_CERTIFICATE=True
-    KUBECONFIG=/tmp/kubeconfig gcloud container clusters get-credentials [NAME OF YOUR CLUSTER] --zone [ZONE] --project [PROJECT NAME]
+    KUBECONFIG=/tmp/kube-potatoe gcloud container clusters get-credentials [NAME OF YOUR CLUSTER] --zone [ZONE] --project [PROJECT NAME]
 
-(just prefix `KUBECONFIG=/tmp/kubeconfig` to the command GCP gives you).
+(just prefix `KUBECONFIG=/tmp/kube-potatoe` to the command GCP gives you).
 
-Share the `/tmp/kubeconfig` file with participants.
+Share the `/tmp/kube-potatoe` file with participants.
+
+You can share your local directory with:
+
+    python3 -m http.server
+
+Find your IP and ask people to:
+
+    curl -O http://[your-ip]:8000/kube-potatoe
