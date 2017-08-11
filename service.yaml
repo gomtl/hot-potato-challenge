@@ -1,11 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: [insert your name here]
+  name: [YOUR NAME]
 spec:
   selector:
-    app: [put the same name here]
+    app: [YOUR NAME]
   ports:
-    - port: 80
+    - port: 80  # Keep this port, so people can reach you through http://[your name]/process
       targetPort: [put the port of your app here]
-      name: [put the same name here]
