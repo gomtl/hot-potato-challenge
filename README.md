@@ -15,30 +15,35 @@ You're invited to come hack together a network of micro-services. We will:
 API to implement
 ----------------
 
-POST /process
+`POST /process`
 
+```
 {"text": "text",
  "history": [
     {"node": "user1", "text": "hello-world", "desc": "We upper-cased the hell out of it"},
   ]
 }
+```
 
-OUTPUT:
+Should output:
 
+```
 {"text": "new_text",
  "history": [
     {"node": "user1", "text": "hello-world"},
     {"node": "latest-call", "text": "new_text"},
  ]}
+```
 
 Always add your "text" reply to the history before returning, along
-with your `hostname`.
+with your `hostname` (or some other debug messages, for tracing).
 
-Base code
----------
+
+Golang base code
+----------------
 
 type Potatoe struct {
-    Text string `json:"text"`
+    Text    string  `json:"text"`
     History []Entry `json:"history"`
 }
 
