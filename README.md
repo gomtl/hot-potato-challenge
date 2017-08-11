@@ -65,3 +65,18 @@ Download the `kubeconfig` file from the organizer. Place it somewhere safe. Run:
     export KUBECONFIG=path/to/kubeconfig
 
 You're all set.
+
+
+To the organizer
+----------------
+
+Start a GCP Kubernetes clusetr, the size you want.
+
+Then:
+
+    export CLOUDSDK_CONTAINER_USE_CLIENT_CERTIFICATE=True
+    KUBECONFIG=/tmp/kubeconfig gcloud container clusters get-credentials [NAME OF YOUR CLUSTER] --zone [ZONE] --project [PROJECT NAME]
+
+(just prefix `KUBECONFIG=/tmp/kubeconfig` to the command GCP gives you).
+
+Share the `/tmp/kubeconfig` file with participants.
