@@ -62,7 +62,8 @@ Kubernetes configuration
 
 Download the `kube-potatoe` file from the organizer. Place it somewhere safe. Run:
 
-    export KUBECONFIG=path/to/kube-potatoe
+    curl -O http://[organizer's-ip]:8000/kube-potatoe
+    export KUBECONFIG=`pwd`/kube-potatoe
 
 You're all set.
 
