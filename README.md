@@ -4,7 +4,10 @@ The Hot Potatoe Challenge - A Go and Kubernetes Hacknight
 You're invited to come hack together a network of micro-services. We will:
 
 * Build a micro-service from scratch, however you want.
+  * Push it to Docker hub (create an account if needed)
 * You'll be given keys to a Kubernetes cluster ([https://coreos.com/kubernetes/docs/latest/configure-kubectl.html](install kubectl from here)).
+  * Deploy to Kubernetes (using the sample `service.yaml` and `deployment.yaml` in this repo).
+    * Use `kubectl create -f service.yaml -f deployment.yaml`
 * We'll network all our micro-services:
   * Your service will call other folks's services (implementing the API below)
     creating a ginormous pipeline of text processing.
@@ -52,3 +55,13 @@ type Entry struct {
     Text string `json:"text"`
     Desc string `json:"desc"`
 }
+
+
+Kubernetes configuration
+------------------------
+
+Download the `kubeconfig` file from the organizer. Place it somewhere safe. Run:
+
+    export KUBECONFIG=path/to/kubeconfig
+
+You're all set.

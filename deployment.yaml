@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: [insert your name here]
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: [insert your name here]
+    spec:
+      containers:
+      - name: api
+        image: [docker hub account]/[image name]:[version]
+        ports:
+        - name: api
+          containerPort: [your app's port]

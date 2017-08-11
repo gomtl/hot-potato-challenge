@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: [insert your name here]
+spec:
+  selector:
+    app: [put the same name here]
+  ports:
+    - port: 80
+      targetPort: [put the port of your app here]
+      name: [put the same name here]
