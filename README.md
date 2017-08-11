@@ -70,7 +70,7 @@ You're all set.
 To the organizer
 ----------------
 
-Start a GCP Kubernetes clusetr, the size you want.
+Start a GCP Kubernetes cluster, the size you want.
 
 Then:
 
