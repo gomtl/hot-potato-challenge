@@ -45,6 +45,7 @@ with your `hostname` (or some other debug messages, for tracing).
 Golang base code
 ----------------
 
+```
 type Potato struct {
     Text    string  `json:"text"`
     History []Entry `json:"history"`
@@ -55,7 +56,7 @@ type Entry struct {
     Text string `json:"text"`
     Desc string `json:"desc"`
 }
-
+```
 
 Kubernetes configuration
 ------------------------
