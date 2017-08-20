@@ -1,5 +1,5 @@
-The Hot Potatoe Challenge - A Go and Kubernetes Hacknight
-=========================================================
+The Hot Potato Challenge - A Go and Kubernetes Hacknight
+========================================================
 
 You're invited to come hack together a network of micro-services. We will:
 
@@ -45,7 +45,7 @@ with your `hostname` (or some other debug messages, for tracing).
 Golang base code
 ----------------
 
-type Potatoe struct {
+type Potato struct {
     Text    string  `json:"text"`
     History []Entry `json:"history"`
 }
@@ -60,10 +60,10 @@ type Entry struct {
 Kubernetes configuration
 ------------------------
 
-Download the `kube-potatoe` file from the organizer. Place it somewhere safe. Run:
+Download the `kube-potato` file from the organizer. Place it somewhere safe. Run:
 
-    curl -O http://[organizer's-ip]:8000/kube-potatoe
-    export KUBECONFIG=`pwd`/kube-potatoe
+    curl -O http://[organizer's-ip]:8000/kube-potato
+    export KUBECONFIG=`pwd`/kube-potato
 
 You're all set.
 
@@ -76,11 +76,11 @@ Start a GCP Kubernetes cluster, the size you want.
 Then:
 
     export CLOUDSDK_CONTAINER_USE_CLIENT_CERTIFICATE=True
-    KUBECONFIG=/tmp/kube-potatoe gcloud container clusters get-credentials [NAME OF YOUR CLUSTER] --zone [ZONE] --project [PROJECT NAME]
+    KUBECONFIG=/tmp/kube-potato gcloud container clusters get-credentials [NAME OF YOUR CLUSTER] --zone [ZONE] --project [PROJECT NAME]
 
-(just prefix `KUBECONFIG=/tmp/kube-potatoe` to the command GCP gives you).
+(just prefix `KUBECONFIG=/tmp/kube-potato` to the command GCP gives you).
 
-Share the `/tmp/kube-potatoe` file with participants.
+Share the `/tmp/kube-potato` file with participants.
 
 You can share your local directory with:
 
@@ -88,4 +88,4 @@ You can share your local directory with:
 
 Find your IP and ask people to:
 
-    curl -O http://[your-ip]:8000/kube-potatoe
+    curl -O http://[your-ip]:8000/kube-potato
