@@ -5,7 +5,7 @@ You're invited to come hack together a network of micro-services. We will:
 
 * Build a micro-service from scratch, however you want.
   * Push it to Docker hub (create an account if needed)
-* You'll be given keys to a Kubernetes cluster ([install kubectl from here](https://coreos.com/kubernetes/docs/latest/configure-kubectl.html)).
+* You'll be given keys to a Kubernetes cluster ([install kubectl from here](https://coreos.com/tectonic/docs/latest/tutorials/kubernetes/configure-kubectl.html)).
   * Deploy to Kubernetes (using the sample `service.yaml` and `deployment.yaml` in this repo).
     * Use `kubectl create -f service.yaml -f deployment.yaml`
 * We'll network all our micro-services:
